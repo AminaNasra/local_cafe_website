@@ -1,0 +1,101 @@
+/* mobile.css - mobile layout only */
+
+/* About section: switch from 2 columns to 1 column */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+/* Hide the about image on mobile */
+.about-image {
+  display: none;
+}
+
+/* Center about text when image is hidden */
+.about-text {
+  grid-column: 1;
+  text-align: center;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.about-text h3 {
+  text-align: center;
+}
+.about-text p {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Menu page: stack image and menu grid vertically */
+
+/* Stack sections vertically */
+.menu-grid-wrapper {
+  grid-template-columns: 1fr; /* single column */
+  grid-template-areas:
+    "image"
+    "grid";
+  gap: 1.5rem;
+}
+
+/* Menu grid: stack name, price, description vertically */
+.menu-grid {
+  grid-template-columns: 1fr; /* single column */
+}
+
+/* hide headers on mobile for simplicity */
+.menu-header {
+  display: none;
+}
+
+.menu-grid p {
+  border-bottom: 1px solid #e0dcd6;
+  padding: 0.5rem 0;
+}
+/* Price column alignment */
+.menu-grid p:nth-child(3n + 2),
+.menu-grid .menu-header:nth-child(2) {
+  text-align: left;
+  font-weight: bold;
+}
+
+/* Hero section: reduce min-height */
+.hero {
+  min-height: 60vh;
+  padding: 2rem 1rem;
+}
+
+.hero-content {
+  max-width: 90%;
+  padding: 1rem;
+}
+
+/* Banner section: reduce height */
+.banner {
+  height: 30vh;
+  padding: 1rem;
+}
+
+/* Product grid (best sellers) */
+.product-grid {
+  grid-template-columns: 1fr; /* single column for mobile */
+  gap: 1.5rem;
+}
+
+/* Info grid: stack boxes vertically */
+.info-grid {
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+/* Contact wrapper: stack form and map vertically */
+.contact-wrapper {
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+/* Footer: center all links */
+footer .container a {
+  display: inline-block;
+  margin: 0.5rem 0;
+}
